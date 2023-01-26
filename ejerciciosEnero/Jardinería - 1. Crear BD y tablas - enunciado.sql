@@ -25,8 +25,13 @@ pais							varchar(50)			not null,
 region							varchar(50) 		not null,
 CP				                varchar(10)			not null,
 telefono		                varchar(20)			not null,
+<<<<<<< HEAD
 linea_direccion1				varchar(50)		    not null,
 linea_direccion2                varchar(50)			not null,
+=======
+linea_direccion1				varchar(10)		    not null,
+linea_direccion2                varchar(20)			not null,
+>>>>>>> 81459b303fb22d81fe8f03e663346b202664a7fa
 primary key(oficinaID)
 );
 #--------------------------------------------------------------------------------------------
@@ -55,7 +60,11 @@ extension					varchar(10)		not null,
 email						varchar(100)	not null,
 oficina						varchar(10)		not null,
 jefe						int      		null,
+<<<<<<< HEAD
 puesto						varchar(50)		,
+=======
+puesto						varchar(50)		null,
+>>>>>>> 81459b303fb22d81fe8f03e663346b202664a7fa
 primary key(empleadoID),
 foreign key(oficina) references oficina(oficinaID),
 foreign key(jefe) references empleado(empleadoID)
@@ -72,8 +81,13 @@ foreign key(jefe) references empleado(empleadoID)
 #--------------------------------------------------------------------------------------------
 create table gama_producto(
 gama						varchar(50),
+<<<<<<< HEAD
 descripcion_texto			text,	
 descripcion_html			text,
+=======
+descripcion_texto			char,	
+descripcion_html			char,
+>>>>>>> 81459b303fb22d81fe8f03e663346b202664a7fa
 imagen						varchar(256),
 primary key(gama)
 );
@@ -170,7 +184,10 @@ precio_proveedor		decimal(15,2)			not null,
 primary key(productoID),
 foreign key(gama) references gama_producto(gama)
 );
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 81459b303fb22d81fe8f03e663346b202664a7fa
 #--------------------------------------------------------------------------------------------
 #	CREACIÓN DE LA TABLA 'detalle_pedido'
 #--------------------------------------------------------------------------------------------
@@ -186,10 +203,17 @@ foreign key(gama) references gama_producto(gama)
 #--------------------------------------------------------------------------------------------
 create table detalle_pedido(
 pedidoID			int,
+<<<<<<< HEAD
 productoID			varchar(15)		,
 cantidad			int				,
 precio_unidad		decimal(15,2)   ,
 linea				smallint		,
+=======
+productoID			varchar(15)		not null,
+cantidad			int				not null,
+precio_unidad		decimal(15,2)   not null,
+linea				smallint		not null,
+>>>>>>> 81459b303fb22d81fe8f03e663346b202664a7fa
 primary key(pedidoID,productoID),
 foreign key(productoID) references producto(productoID),
 foreign key(pedidoID) references pedido(pedidoID)
@@ -218,4 +242,7 @@ foreign key(clienteID) references cliente(clienteID)
 #--------------------------------------------------------------------------------------------
 #	DICCIONARIO DE DATOS
 #--------------------------------------------------------------------------------------------
+<<<<<<< HEAD
 select * from pago;
+=======
+>>>>>>> 81459b303fb22d81fe8f03e663346b202664a7fa

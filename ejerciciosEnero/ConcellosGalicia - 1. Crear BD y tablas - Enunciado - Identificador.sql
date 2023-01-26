@@ -4,6 +4,7 @@
 drop database if exists ConcellosGalicia_Identificador;
 create database ConcellosGalicia_Identificador;
 use ConcellosGalicia_Identificador;
+<<<<<<< HEAD
 
 
 
@@ -12,6 +13,8 @@ use ConcellosGalicia_Identificador;
 
 
 
+=======
+>>>>>>> 81459b303fb22d81fe8f03e663346b202664a7fa
 #*******************************************************************************************
 #	CREACIÓN DE LAS TABLAS DE LA BASE DE DATOS
 #*******************************************************************************************
